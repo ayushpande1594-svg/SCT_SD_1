@@ -1,18 +1,24 @@
-# E-commerce Product Scraper (Java)
+# SCT_SD_1
 
-A dependency-free Java program that collects product names, prices, and ratings from the public [Web Scraper Test Sites](https://webscraper.io/test-sites/e-commerce/static/computers/laptops) e-commerce catalog and writes them to a CSV file.
+Java practice projects.
 
-The default source is deliberately a public test catalog intended for scraping practice. Before changing the URL to a real store, check its terms of service and `robots.txt`, avoid authenticated or personal data, and use a reasonable request rate.
+## Temperature Converter
 
-## Requirements
+The existing `Task1.java` and `Task2.java` files contain the original temperature-converter exercises.
 
-- Java 17 or later (the program uses Java's built-in `HttpClient` and HTML parser)
+## E-commerce Product Scraper
+
+A dependency-free Java program that collects product names, prices, and ratings from the public [Web Scraper Test Sites](https://webscraper.io/test-sites/e-commerce/static/computers/laptops) catalog and writes them to CSV.
+
+The default source is a public test catalog intended for scraping practice. Before changing the URL to a real store, check its terms of service and `robots.txt`, avoid authenticated or personal data, and use a reasonable request rate.
+
+### Requirements
+
+- Java 17 or later
 
 No Maven, Gradle, or third-party JARs are required.
 
-## Run
-
-From this project directory in PowerShell:
+### Run the scraper
 
 ```powershell
 javac -d out src/main/java/com/skillcraft/scraper/*.java
@@ -33,7 +39,7 @@ To use a compatible catalog URL:
 java -cp out com.skillcraft.scraper.EcommerceScraper --url "https://webscraper.io/test-sites/e-commerce/static/computers/tablets" --pages 2
 ```
 
-## CSV columns
+### CSV columns
 
 | Column | Meaning |
 | --- | --- |
@@ -44,7 +50,7 @@ java -cp out com.skillcraft.scraper.EcommerceScraper --url "https://webscraper.i
 | `product_url` | Link to the product page |
 | `source_url` | Catalog page from which the record was extracted |
 
-## Project layout
+### Scraper layout
 
 ```text
 src/main/java/com/skillcraft/scraper/
